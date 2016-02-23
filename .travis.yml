@@ -14,7 +14,7 @@ install:
 before_script:
   - pip install .
 script:
-  - coverage run --branch --source=src/allmydata tahoe --version-and-path debug trial --rterrors --reporter=timing
+  - coverage run --branch --source=src/allmydata `which tahoe` --version-and-path debug trial --rterrors --reporter=timing
 after_success:
   coveralls
 notifications:
