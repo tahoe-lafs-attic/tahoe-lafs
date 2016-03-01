@@ -12,7 +12,7 @@ before_install:
 install:
   - pip install coverage coveralls
 before_script:
-  - pip install .
+  - pip install -e .
 script:
   - coverage run --branch --source=src/allmydata `which tahoe` --version-and-path debug trial --rterrors --reporter=timing
 after_success:
